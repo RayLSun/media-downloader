@@ -1,0 +1,23 @@
+# 本地下载产物
+downloads/
+*.mp4
+*.hevc
+*.av1
+
+# Cookie / 凭据
+cookies.txt
+.cookie
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
