@@ -37,4 +37,11 @@ metadata:
 
 ## 平台笔记
 
-- 小红书：`references/xiaohongshu.md`。已落地实现于本仓库根目录（仅依赖 requests），其 VERIFICATION.md 记录当前待真实链接验证项。
+- 小红书：`references/xiaohongshu.md`。已落地实现于 `D:/SunProjects/xhs-downloader`（仅依赖 requests），其 VERIFICATION.md 记录当前待真实链接验证项。
+
+## GitHub 同步链（2026-10-19 起）
+
+- 公开仓库：https://github.com/RayLSun/media-downloader （PUBLIC，main）
+- 组成：工具（xhs-downloader 完整项目）在仓库根 + `skill/` 子目录（本技能的 SKILL.md + references）
+- 同步方式：仓库副本在 `D:/SunProjects/media-downloader`（独立目录，非 symlink）。改动工具→重跑单测→复制到仓库（排除 downloads/缓存）→push 直连（`git -c http.proxy= -c https.proxy= push`）。复制时把 `D:/SunProjects/xhs-downloader` 字样替换为「本仓库根目录」。
+- 真实 xsec_token 只会出现在 downloads/（已 gitignore）；推前扫描暂存区确认无完整 token。
